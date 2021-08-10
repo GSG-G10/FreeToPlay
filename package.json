@@ -1,0 +1,25 @@
+{
+  "name": "playry-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
+  }
+}
