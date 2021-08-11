@@ -3,9 +3,9 @@ const secondePopularPhoto = document.querySelector('.seconde-pop');
 const thirdPopularPhoto = document.querySelector('.third-pop');
 const fourthPopularPhoto = document.querySelector('.fourth-pop');
 const filterSection = document.querySelector('.filter-section');
-const platformArray = ['All Platforms', 'Windows (PC)', 'Browser (Web)'];
+const platformArray = ['All Platforms', 'pc', 'browser'];
 const genreArray = [' All Genres', 'mmorpg', 'shooter', 'strategy', 'moba', 'racing', 'sports', 'social', 'sandbox', 'open-world', 'survival', 'pvp', 'pve', 'pixel', 'voxel', 'zombie', 'turn-based', 'first-person', 'third-Person', 'top-down', 'tank', 'space', 'sailing', 'side-scroller', 'superhero', 'permadeath', 'card', 'battle-royale', 'mmo', 'mmofps', 'mmotps', '3d', '2d', 'anime', 'fantasy', 'sci-fi', 'fighting', 'action-rpg', 'action', 'military', 'martial-arts', 'flight', 'low-spec', 'tower-defense', 'horror', 'mmorts'];
-const sortArray = ['Relevance', 'Popularity', 'Release Date', 'Alphabetical'];
+const sortArray = ['relevance', 'popularity', 'release Date', 'alphabetical'];
 
 const createNode = (tag, className, parentNode) => {
   const tagName = document.createElement(tag);
@@ -29,9 +29,9 @@ const createSelectContainer = (labelContent, optionsArray) => {
   });
 };
 
-createSelectContainer('Platform', platformArray);
-createSelectContainer('Genre', genreArray);
-createSelectContainer('Sort By', sortArray);
+createSelectContainer('platform', platformArray);
+createSelectContainer('genre', genreArray);
+createSelectContainer('sort-by', sortArray);
 
 // eslint-disable-next-line no-unused-vars
 const onLoadPage = (() => {
