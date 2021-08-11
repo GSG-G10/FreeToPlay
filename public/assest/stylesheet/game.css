@@ -147,6 +147,7 @@ body {
   font-size: 1.2rem;
 }
 .game-details-section {
+  margin-top: 15vh;
   width: 60%;
   position: absolute;
   right: 0;
