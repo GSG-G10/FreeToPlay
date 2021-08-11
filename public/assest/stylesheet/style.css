@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Roboto", sans-serif;
   --brandColor: #2da5ff;
   --mainColor: #2a2e33;
   --titleColor: #aaaaaa;
@@ -214,4 +214,22 @@ body {
   height: 52px;
   width: 22%;
   color: var(--titleColor);
+}
+
+.filter-section{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.filter-label{
+    color: var(--paragraphColor);
+    margin-right: 15px;
+    font-size: 1rem;
+}
+.filter-select{
+    background-color: var(--mainColor);
+    border: none;
+    font-size: 1rem;
+    color: var(--whiteColor);
 }

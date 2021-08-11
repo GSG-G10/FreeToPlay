@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const express = require('express');
-const axios = require('axios')
-require('env2')('.env')
+const axios = require('axios');
 const app = express();
 const path = require('path');
 const compression = require('compression');
@@ -40,10 +39,28 @@ app.get('/popImages', (req, res) => {
 app.get('/game-list', (req, res) => {
   axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity', API_KEY)
     .then((response) => response)
-    .then((response) => response.data.slice(0, 250))
+    .then((response) => response.data.slice(0, 50))
     .then((response) => res.send(response))
     .catch((err) => res.send(err.message));
 });
+const generateOption = (params) => ({
+  params,
+  headers: {
+    'x-rapidapi-key': '469c1ee794msh8a7c6f3db2abd58p1e322ejsn1ead0ede256f',
+    'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+  },
+});
+
+app.get('/filterGame/:label/:option', (req, res) => {
+  const labelValue = req.params.label;
+  const { option } = req.params;
+  const params = {};
+  params[labelValue] = option;
+  axios.request(`https://free-to-play-games-database.p.rapidapi.com/api/games?${labelValue}=${option}`, generateOption(params))
+    .then((response) => res.json(response.data))
+    .catch((err) => res.send(err.message));
+});
+
 app.use(error404);
 app.use(error500);
 
