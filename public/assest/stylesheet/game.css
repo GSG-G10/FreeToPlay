@@ -31,8 +31,10 @@
   flex: 6;
 }
 .container{
-  width: 90%;
+  width: 95%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 body {
   background-color: var(--mainColor);
@@ -96,10 +98,15 @@ body {
 
 }
 .game-page {
-  margin-top:15vh;
-  height: 85vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top:15vh auto;
+  width: 90%;
 }
+
 .game-thumbnail-section {
+  margin-top: 15vh;
   width: 30%;
   position: fixed;
 }
