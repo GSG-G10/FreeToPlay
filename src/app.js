@@ -19,8 +19,22 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+const API_KEY = {
+  headers: {
+    'x-rapidapi-key': '469c1ee794msh8a7c6f3db2abd58p1e322ejsn1ead0ede256f',
+    'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+  },
+};
+app.get('/popImages', (req, res) => {
+  axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=alphabetical', API_KEY)
+    .then((response) => response)
+    .then((response) => res.send([
+      response.data[0],
+      response.data[1],
+      response.data[2],
+      response.data[3],
+    ]))
+    .catch((err) => res.send(err.message));
 });
 
 app.use(error404);
