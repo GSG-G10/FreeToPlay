@@ -190,7 +190,6 @@ body {
 }
 .games-list-card-details-description {
   color: var(--paragraphColor);
-  width: 70%;
   font-size: 1.2rem;
   line-height: 1.4;
 }
