@@ -38,7 +38,6 @@ body {
   margin: auto;
 }
 .header {
-  transition: all .8s ease-in-out;
   width: 100%;
 }
 .header-navbar {
@@ -156,6 +155,7 @@ body {
   width: 28%;
   height: 65vh;
   box-shadow: -3px -3px 5px 5px #222;
+  margin-bottom: 5rem;
 }
 .games-list-card-image {
   
@@ -212,6 +212,6 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 52px;
-  width: 20%;
+  width: 22%;
   color: var(--titleColor);
 }

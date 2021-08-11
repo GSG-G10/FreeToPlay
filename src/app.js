@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const express = require('express');
 const axios = require('axios')
-
+require('env2')('.env')
 const app = express();
 const path = require('path');
 const compression = require('compression');
@@ -27,7 +27,7 @@ const API_KEY = {
   },
 };
 app.get('/popImages', (req, res) => {
-  axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=alphabetical', API_KEY)
+  axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity', API_KEY)
     .then((response) => response)
     .then((response) => res.send([
       response.data[0],
@@ -37,7 +37,13 @@ app.get('/popImages', (req, res) => {
     ]))
     .catch((err) => res.send(err.message));
 });
-
+app.get('/game-list', (req, res) => {
+  axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity', API_KEY)
+    .then((response) => response)
+    .then((response) => response.data.slice(0, 250))
+    .then((response) => res.send(response))
+    .catch((err) => res.send(err.message));
+});
 app.use(error404);
 app.use(error500);
 
