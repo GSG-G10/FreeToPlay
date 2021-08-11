@@ -12,3 +12,136 @@
     --paragraphColor: #999999;
     --whiteColor: #FFFFFF;
 }
+.col-1{
+    flex: 1;
+}
+.col-2{
+    flex: 2;
+}
+.col-3{
+    flex: 3;
+}
+.col-4{
+    flex: 4;
+}
+.col-5{
+    flex: 5;
+}
+.col-6{
+    flex: 6;
+}
+body{
+    background: #2a2e33;
+    height: 200vh;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    height: 100vh;border-bottom: 1px solid #FFFFFF;
+}
+.header-navbar{
+    position: sticky;
+    width: 100%;
+    z-index: 15;
+    height: 10vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    box-shadow: 0 10px 10px 10px #222;
+}
+.navbar-container{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.navbar-logo{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
+}
+.navbar-logo-content{
+    color: var(--brandColor);
+    font-size: 1.5rem;
+
+}
+.navbar-list{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar-list-item{
+    list-style-type: none;
+    text-align: center;
+}
+.navbar-list-item-link{
+    text-decoration: none;
+    color: var(--titleColor);
+    font-size: 1.3rem;
+}
+.navbar-cart-box{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 1.3rem;
+    color: var(--titleColor);
+
+}
+.special-games{
+    margin-top: 5vh;
+    height: 85vh;
+
+}
+.special-games-container{
+    height: 100%;
+    padding: 5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.special-games-details{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+.special-games-title{
+    color: var(--titleColor);
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 1.5;
+}
+.special-games-description{
+    color: var(--paragraphColor);
+    letter-spacing: 0.1rem;
+    font-size:1.8rem
+}
+.popular-games-grid{
+    width: 100%;
+    height: 40%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.popular-games-grid-box{
+    padding-right: 1.5rem;
+    height: 100%;
+}
+.popular-games-grid-box:last-child{
+    padding: 0;
+}
+.popular-games-grid-box-bg{
+    width : 100%;
+    height: 100%;
+    object-fit: contain;
+}
