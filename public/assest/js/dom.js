@@ -7,7 +7,6 @@ const onLoadPage = (() => {
     fetch('/popImages')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data[0]);
         firstPopularPhoto.src = data[0].thumbnail;
         secondePopularPhoto.src = data[1].thumbnail;
         thirdPopularPhoto.src = data[2].thumbnail;
