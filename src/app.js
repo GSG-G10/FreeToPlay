@@ -1,10 +1,12 @@
+/* eslint-disable no-console */
 const express = require('express');
 
 const app = express();
 const path = require('path');
 const compression = require('compression');
 const favicon = require('serve-favicon');
-const axios = require('axios');
+const error404 = require('./handle404');
+const error500 = require('./handle500');
 
 app.disabled('x-powered-by');
 app.set('port', process.env.PORT || 4000);
@@ -34,6 +36,9 @@ app.get('/popImages', (req, res) => {
     ]))
     .catch((err) => res.send(err.message));
 });
+
+app.use(error404);
+app.use(error500);
 
 app.listen(app.get('port'), () => {
   console.log('App Running On Port', app.get('port'));
