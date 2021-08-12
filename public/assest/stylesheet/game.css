@@ -5,6 +5,7 @@ padding: 0;
 box-sizing: border-box;
 }
 :root {
+    font-size: 18px;
 font-family: "Roboto", sans-serif;
 --brandColor: #2da5ff;
 --mainColor: #2a2e33;
@@ -31,7 +32,7 @@ flex: 5;
 flex: 6;
 }
 .container{
-width: 95%;
+width: 90%;
 margin: auto;
 display: flex;
 justify-content: space-between;
@@ -66,9 +67,12 @@ align-items: center;
 justify-content: flex-start;
 }
 .navbar-logo-content{
-color: var(--brandColor);
 font-size: 1.5rem;
+}
 
+.navbar-logo-content h1 a{
+    text-decoration: none;
+    color: var(--brandColor);
 }
 .navbar-list{
 height: 100%;
@@ -109,7 +113,7 @@ position: fixed;
 }
 .video-img-container {
 width: 100%;
-height: 200px;
+height: 35vh;
 }
 .video-img {
 width: 100%;
@@ -119,7 +123,7 @@ height: 100%;
 display: flex;
 margin-top: 20px;
 width: 100%;
-height: 50px;
+height: 90px;
 }
 .play-button {
 display: flex;
@@ -147,7 +151,7 @@ font-size: 1.2rem;
 margin-top: 15vh;
 width: 60%;
 position: absolute;
-right: 0;
+right: -100px;
 }
 .game-name {
 color: var(--brandColor);
@@ -181,9 +185,10 @@ height: 40px;
 margin-bottom: 20px;
 }
 .game-description {
-color: #7a8288;
-font-size: 1rem;
+color: var(--paragraphColor);
+font-size: 1.3rem;
 text-align: justify;
+line-height: 2rem;
 }
 .screenShots-section {
 margin-bottom: 70px;
@@ -191,7 +196,7 @@ margin-bottom: 70px;
 .screenShots-container {
 display: flex;
 justify-content: space-between;
-height: 120px;
+height: 200px;
 }
 .screenShots-section img {
 width: 30%;
