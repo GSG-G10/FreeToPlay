@@ -15,7 +15,9 @@ app.use(favicon(path.join(__dirname, '..', 'public/favicon.ico')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
-
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
 
 const API_KEY = {
   headers: {
@@ -53,12 +55,6 @@ app.get('/filterGame/:label/:option', (req, res) => {
   const params = {};
   params[labelValue] = option;
   axios.request(`https://free-to-play-games-database.p.rapidapi.com/api/games?${labelValue}=${option}`, generateOption(params))
-    .then((response) => res.json(response.data))
-    .catch((err) => res.send(err.message));
-});
-app.get('/game/:id', (req, res) => {
-  const { id } = req.params;
-  axios.request(`https://www.freetogame.com/api/game?id=${id}`, API_KEY)
     .then((response) => res.json(response.data))
     .catch((err) => res.send(err.message));
 });

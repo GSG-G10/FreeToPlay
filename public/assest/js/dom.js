@@ -58,18 +58,11 @@ const onLoadPage = (() => {
   loadGamesList();
 })();
 
-const a = (id) => {
-  window.location.href = `/game.html?id=${id}`;
-};
-
 const cb = (data) => {
-  data.forEach((e, index) => {
+  data.forEach((e) => {
     const createStick = document.createElement('div');
     createStick.classList.add('games-list-card');
     gameListContainer.appendChild(createStick);
-    createStick.onclick = () => {
-      a(data[index].id);
-    };
     const cardImgBox = document.createElement('div');
     createStick.appendChild(cardImgBox);
     cardImgBox.classList.add('games-list-card-image');
@@ -135,4 +128,4 @@ const removeChild = (parent) => {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-};
+}
