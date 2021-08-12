@@ -37,7 +37,7 @@ app.get('/popImages', (req, res) => {
 app.get('/game-list', (req, res) => {
   axios.request('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity', API_KEY)
     .then((response) => response)
-    .then((response) => response.data.slice(3))
+    .then((response) => response.data.slice(4))
     .then((response) => res.send(response))
     .catch((err) => res.send(err.message));
 });
