@@ -1,194 +1,199 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 :root {
-  font-family: "Roboto", sans-serif;
-  --brandColor: #2da5ff;
-  --mainColor: #2a2e33;
-  --titleColor: #aaaaaa;
-  --paragraphColor: #999999;
-  --whiteColor: #ffffff;
+font-family: "Roboto", sans-serif;
+--brandColor: #2da5ff;
+--mainColor: #2a2e33;
+--titleColor: #aaaaaa;
+--paragraphColor: #999999;
+--whiteColor: #ffffff;
 }
 .col-1{
-  flex: 1;
+flex: 1;
 }
 .col-2{
-  flex: 2;
+flex: 2;
 }
 .col-3{
-  flex: 3;
+flex: 3;
 }
 .col-4{
-  flex: 4;
+flex: 4;
 }
 .col-5{
-  flex: 5;
+flex: 5;
 }
 .col-6{
-  flex: 6;
+flex: 6;
 }
 .container{
-  width: 90%;
-  margin: auto;
+width: 95%;
+margin: auto;
+display: flex;
+justify-content: space-between;
 }
 body {
-  background-color: var(--mainColor);
+background-color: var(--mainColor);
 }
 .header{
-  width: 100%;
+width: 100%;
 }
 .header-navbar{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 15;
-  height: 10vh;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-  background: var(--mainColor);
-  box-shadow: 0 10px 10px 10px #222;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 15;
+height: 10vh;
+border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+background: var(--mainColor);
+box-shadow: 0 10px 10px 10px #222;
 }
 .navbar-container{
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  
+height: 100%;
+display:flex;
+align-items: center;
+justify-content: center;
 }
 
 .navbar-logo{
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: flex-start;
-  
-  
+height: 100%;
+display:flex;
+align-items: center;
+justify-content: flex-start;
 }
 .navbar-logo-content{
-  color: var(--brandColor);
-  font-size: 1.5rem;
+color: var(--brandColor);
+font-size: 1.5rem;
 
 }
 .navbar-list{
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: space-evenly;
+height: 100%;
+display:flex;
+align-items: center;
+justify-content: space-evenly;
 }
 .navbar-list-item{
-  list-style-type: none;
-  text-align: center;
+list-style-type: none;
+text-align: center;
 }
 .navbar-list-item-link{
-  text-decoration: none;
-  color: var(--titleColor);
-  font-size: 1.3rem;
+text-decoration: none;
+color: var(--titleColor);
+font-size: 1.3rem;
 }
 .navbar-cart-box{
-  display:flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100%;
-  font-size: 1.3rem;
-  color: var(--titleColor);
+display:flex;
+align-items: center;
+justify-content: flex-end;
+height: 100%;
+font-size: 1.3rem;
+color: var(--titleColor);
 
 }
 .game-page {
-  margin-top:15vh;
-  height: 85vh;
+position: relative;
+display: flex;
+justify-content: center;
+margin-top:15vh auto;
+width: 90%;
 }
+
 .game-thumbnail-section {
-  width: 30%;
-  position: fixed;
+margin-top: 15vh;
+width: 30%;
+position: fixed;
 }
 .video-img-container {
-  width: 100%;
-  height: 200px;
+width: 100%;
+height: 200px;
 }
 .video-img {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 }
 .buttons-container {
-  display: flex;
-  margin-top: 20px;
-  width: 100%;
-  height: 50px;
+display: flex;
+margin-top: 20px;
+width: 100%;
+height: 50px;
 }
 .play-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85%;
-  height: 100%;
-  background-color: var(--brandColor);
-  text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 85%;
+height: 100%;
+background-color: var(--brandColor);
+text-decoration: none;
 }
 .play-button button {
-  background-color: var(--brandColor);
-  color: var(--whiteColor);
-  font-weight: bold;
-  border: none;
-  font-size: 1.2em;
+background-color: var(--brandColor);
+color: var(--whiteColor);
+font-weight: bold;
+border: none;
+font-size: 1.2em;
 }
 .add-button {
-  width: 15%;
-  border: none;
-  color: var(--brandColor);
-  font-size: 1.2rem;
+width: 15%;
+border: none;
+color: var(--brandColor);
+font-size: 1.2rem;
 }
 .game-details-section {
-  width: 60%;
-  position: absolute;
-  right: 0;
+margin-top: 15vh;
+width: 60%;
+position: absolute;
+right: 0;
 }
 .game-name {
-  color: var(--brandColor);
-  font-size: 2.2rem;
+color: var(--brandColor);
+font-size: 2.2rem;
 }
 .more-details {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px 0;
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin: 30px 0;
 }
 .details {
-  width: 30%;
-  margin-top: 30px;
-  color: #7a8288;
-  font-weight: 400;
-  font-size: 1rem;
+width: 30%;
+margin-top: 30px;
+color: #7a8288;
+font-weight: 400;
+font-size: 1rem;
 }
 .details-value {
-  color: #aaa;
-  font-size: 1.2em;
+color: #aaa;
+font-size: 1.2em;
 }
 .description-section {
-  width: 100%;
-  margin: 70px 0;
+width: 100%;
+margin: 70px 0;
 }
 .section-title {
-  color: var(--titleColor);
-  border-bottom: 1px solid rgb(216, 215, 215);
-  height: 40px;
-  margin-bottom: 20px;
+color: var(--titleColor);
+border-bottom: 1px solid rgb(216, 215, 215);
+height: 40px;
+margin-bottom: 20px;
 }
 .game-description {
-  color: #7a8288;
-  font-size: 1rem;
-  text-align: justify;
+color: #7a8288;
+font-size: 1rem;
+text-align: justify;
 }
 .screenShots-section {
-  margin-bottom: 70px;
+margin-bottom: 70px;
 }
 .screenShots-container {
-  display: flex;
-  justify-content: space-between;
-  height: 120px;
+display: flex;
+justify-content: space-between;
+height: 120px;
 }
 .screenShots-section img {
-  width: 30%;
-  height: 100%;
+width: 30%;
+height: 100%;
 }
