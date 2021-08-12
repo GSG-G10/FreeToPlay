@@ -7,7 +7,7 @@ const compression = require('compression');
 const favicon = require('serve-favicon');
 const error404 = require('./handle404');
 const error500 = require('./handle500');
-
+require('env2')('.env')
 app.disabled('x-powered-by');
 app.set('port', process.env.PORT || 4000);
 app.use(compression());
@@ -21,8 +21,7 @@ app.get('/', (req, res) => {
 
 const API_KEY = {
   headers: {
-    'x-rapidapi-key': '469c1ee794msh8a7c6f3db2abd58p1e322ejsn1ead0ede256f',
-    'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+    'x-rapidapi-key': process.env.API_KEY,
   },
 };
 app.get('/popImages', (req, res) => {
@@ -46,8 +45,7 @@ app.get('/game-list', (req, res) => {
 const generateOption = (params) => ({
   params,
   headers: {
-    'x-rapidapi-key': '469c1ee794msh8a7c6f3db2abd58p1e322ejsn1ead0ede256f',
-    'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+    'x-rapidapi-key': process.env.API_KEY,
   },
 });
 
